@@ -38,6 +38,6 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(-,root,root)
 %{_bindir}/%{name}
-%{_docdir}/%{name}
+#%{_docdir}/%{name}
 %{_datadir}/applications/%{name}.desktop
 %{_datadir}/%{name}

@@ -1,5 +1,5 @@
 Name:		nixnote
-Version:	1.0
+Version:	1.1
 Release:	%mkrel 1
 Group:		Networking/Other
 Summary:	Evernote-clone. Use with Evernote to remember everything

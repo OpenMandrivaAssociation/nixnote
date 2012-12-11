@@ -41,3 +41,13 @@ rm -rf $RPM_BUILD_ROOT
 #%{_docdir}/%{name}
 %{_datadir}/applications/%{name}.desktop
 %{_datadir}/%{name}
+
+%changelog
+* Mon Nov 28 2011 Sergey Zhemoitel <serg@mandriva.org> 1.1-1mdv2012.0
++ Revision: 735076
+- new release 1.1
+
+* Sun Sep 11 2011 Sergey Zhemoitel <serg@mandriva.org> 1.0-1
++ Revision: 699387
+- imported package nixnote
+

@@ -1,23 +1,26 @@
 Name:		nixnote
-Version:	1.1
-Release:	%mkrel 1
+Version:	1.4
+Release:	1
 Group:		Networking/Other
 Summary:	Evernote-clone. Use with Evernote to remember everything
 License:	GPLv2
 URL:		http://nevernote.sourceforge.net/
-Source:		%{name}-%{version}_i386.tar.gz
+Source0:	%{name}-%{version}_i386.tar.gz
+Source1:	%{name}-%{version}_amd64.tar.gz
 Patch:		%{name}.desktop-ru.patch
-BuildRoot:	%{_tmppath}/%{name}-%{version}-build
 Obsoletes:	nevernote
 
 %description
 Evernote-clone. Use with Evernote to remember everything
 
 %prep
-%setup -q -n %{name}
-%patch -p0
+%ifarch %ix86
+%setup -q -b 0 -n %{name}
+%else
+%setup -q -b 1 -n %{name}
+%endif
 
-#%build
+%patch -p0
 
 %install
 install -d -m 755 %{buildroot}%{_bindir}
@@ -31,9 +34,6 @@ cp -a usr/share/%{name}/* %{buildroot}%{_datadir}/%{name}
 
 #install -d -m 755 %{buildroot}%{_docdir}/%{name}
 #install -m 644 usr/share/doc/%{name}/* %{buildroot}%{_docdir}/%{name}
-
-%clean
-rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(-,root,root)

@@ -1,6 +1,6 @@
 Name:		nixnote
 Version:	1.4
-Release:	1
+Release:	2
 Group:		Networking/Other
 Summary:	Evernote-clone. Use with Evernote to remember everything
 License:	GPLv2
@@ -8,6 +8,7 @@ URL:		http://nevernote.sourceforge.net/
 Source0:	%{name}-%{version}_i386.tar.gz
 Source1:	%{name}-%{version}_amd64.tar.gz
 Patch:		%{name}.desktop-ru.patch
+Requires:   java-openjdk
 Obsoletes:	nevernote
 
 %description

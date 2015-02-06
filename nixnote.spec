@@ -1,6 +1,6 @@
 Name:		nixnote
 Version:	1.4
-Release:	5
+Release:	6
 Group:		Networking/Other
 Summary:	Evernote-clone. Use with Evernote to remember everything
 License:	GPLv2
